@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>909</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI Historic</family>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(59, 59, 59);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_main" rowstretch="1,2" columnstretch="2,10,2" columnminimumwidth="0,0,0">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="Layout_display">
+        <item>
+         <widget class="QWidget" name="gridWidget_2" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(111, 111, 111);
+border-radius:10px</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="2" column="0">
+            <widget class="QProgressBar" name="display_bar_time">
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLineEdit" name="label_display">
+               <property name="text">
+                <string>Display :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="display_flood">
+               <property name="text">
+                <string>Flood</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="display_contour">
+               <property name="text">
+                <string>Contour</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="display_vector">
+               <property name="text">
+                <string>Vector</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="display_mesh">
+               <property name="text">
+                <string>Mesh</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(167, 167, 167);
+</string>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="gridFrame_2">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(111, 128, 128);
+border-radius:10px</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="4">
+                 <widget class="QToolButton" name="play_next">
+                  <property name="text">
+                   <string>|&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="5">
+                 <widget class="QToolButton" name="play_end">
+                  <property name="text">
+                   <string>||&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QToolButton" name="play_back">
+                  <property name="text">
+                   <string>&lt;|</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QToolButton" name="play_play">
+                  <property name="text">
+                   <string>Play</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QToolButton" name="play_start">
+                  <property name="text">
+                   <string>&lt;||</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QToolButton" name="play_stop">
+                  <property name="text">
+                   <string>Stop</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="display_time">
+             <property name="text">
+              <string>Time :   ... s</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1" rowspan="2">
+       <layout class="QHBoxLayout" name="Layout_plot"/>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="Layout_ToPLot">
+        <item>
+         <widget class="QWidget" name="gridWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(111, 111, 111);
+border-radius:10px</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,10">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_4" rowstretch="100,0,0,0,0,0,0,0">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item row="1" column="0">
+              <widget class="QComboBox" name="comboBox_flood">
+               <property name="styleSheet">
+                <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QComboBox" name="comboBox_contour">
+               <property name="styleSheet">
+                <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QToolButton" name="Button_vector">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Vector (x,y,z) :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QToolButton" name="Button_coord_sys">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Coordinate system (x,y,z) :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QToolButton" name="Button_contour">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Contour :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <layout class="QGridLayout" name="gridLayout_8">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QComboBox" name="comboBox_vectorX">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QComboBox" name="comboBox_vectorZ">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QComboBox" name="comboBox_vectorY">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="7" column="0">
+              <layout class="QGridLayout" name="gridLayout_9">
+               <item row="0" column="1">
+                <widget class="QComboBox" name="comboBox_coord_sysY">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QComboBox" name="comboBox_coord_sysX">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QComboBox" name="comboBox_coord_sysZ">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:20px;
+background-color: rgb(167, 167, 167);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <widget class="QToolButton" name="Button_flood">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Flood :</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QWidget" name="verticalWidget" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_3"/>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QWidget" name="horizontalWidget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="2">
+       <layout class="QHBoxLayout" name="Layout_ShowData"/>
+      </item>
+      <item row="1" column="2">
+       <layout class="QHBoxLayout" name="Layout_Bonus"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>909</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menu_export">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="menu_export_png"/>
+     <addaction name="menu_export_avi"/>
+    </widget>
+    <addaction name="menu_load"/>
+    <addaction name="menu_export"/>
+    <addaction name="menu_save"/>
+    <addaction name="menu_saveas"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPreference">
+    <property name="title">
+     <string>Preference</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPlayMacro">
+    <property name="title">
+     <string>PlayMacro</string>
+    </property>
+    <addaction name="menu_load_macro"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuPreference"/>
+   <addaction name="menuPlayMacro"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actiondata_reader"/>
+  </widget>
+  <action name="menu_load">
+   <property name="text">
+    <string>Load</string>
+   </property>
+   <property name="statusTip">
+    <string>Load a file</string>
+   </property>
+  </action>
+  <action name="menu_save">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="menu_load_macro">
+   <property name="text">
+    <string>Load macro</string>
+   </property>
+  </action>
+  <action name="menu_export_png">
+   <property name="text">
+    <string>.png</string>
+   </property>
+  </action>
+  <action name="menu_export_avi">
+   <property name="text">
+    <string>.avi</string>
+   </property>
+  </action>
+  <action name="menu_saveas">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actiondata_reader">
+   <property name="text">
+    <string>data_reader</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
